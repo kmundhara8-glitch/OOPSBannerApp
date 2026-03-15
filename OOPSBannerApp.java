@@ -1,63 +1,38 @@
 /**
- * OOPSBannerApp
+ * OOPS Banner App
  *
- * UC1: Print OOPS to Console
- * UC2: Render OOPS as Banner using Print Statements
- * UC3: Render OOPS as Banner using String.join()
+ * UC4: Render OOPS as Banner using String Array and Loop
  *
- * @author Kishan
- * @version 3.0
- */
-public class OOPSBannerApp {
+ * Goal:
+ * Store banner lines inside a String array and use a loop
+ * to print each line of the banner.
+ *
+ * Key Concepts:
+ * - String Array
+ * - Array Initialization
+ * - String.join()public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        // UC1
-        System.out.println("OOPS");
-        System.out.println();
+        // Create a String array to store banner lines
+        String[] banner = new String[7];
 
-        // UC3 - Banner using String.join()
+        banner[0] = String.join(" ", " ***** ", " ***** ", " ****** ", " ***** ");
+        banner[1] = String.join(" ", "*     *", "*     *", "*     *", "*");
+        banner[2] = String.join(" ", "*     *", "*     *", "*     *", "*");
+        banner[3] = String.join(" ", "*     *", "*     *", "****** ", " ***** ");
+        banner[4] = String.join(" ", "*     *", "*     *", "*      ", "     *");
+        banner[5] = String.join(" ", "*     *", "*     *", "*      ", "*    *");
+        banner[6] = String.join(" ", " ***** ", " ***** ", "*      ", " **** ");
 
-        System.out.println(String.join(" ",
-                " *****  ",
-                " *****  ",
-                " ****** ",
-                " ****** "));
-
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                "*     * ",
-                "*     * "));
-
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                "*     * ",
-                "*       "));
-
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                "******  ",
-                " ****** "));
-
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                "*       ",
-                "      * "));
-
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                "*       ",
-                "*     * "));
-
-        System.out.println(String.join(" ",
-                " *****  ",
-                " *****  ",
-                "*       ",
-                " *****  "));
+        // Print banner using loop
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
+ * - Enhanced For Loop
+ *
+ * Output:
+ * Banner display of the word OOPS using '*' characters.
+ */
