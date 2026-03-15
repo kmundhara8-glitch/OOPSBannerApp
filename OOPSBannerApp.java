@@ -1,29 +1,33 @@
 /**
  * OOPS Banner App
  *
- * UC4: Render OOPS as Banner using String Array and Loop
+ * UC5: Render OOPS as Banner using Inline Array Initialization
  *
  * Goal:
- * Store banner lines inside a String array and use a loop
- * to print each line of the banner.
+ * Combine array declaration and initialization in a single statement
+ * using String.join() to build the banner lines.
  *
  * Key Concepts:
- * - String Array
- * - Array Initialization
- * - String.join()public class OOPSBannerApp {
+ * - Inline Array Initialization
+ * - String.join()
+ * - Enhanced For Loop
+ *
+ * Output:
+ * Banner display of the word OOPS using '*' characters.
+ */public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        // Create a String array to store banner lines
-        String[] banner = new String[7];
-
-        banner[0] = String.join(" ", " ***** ", " ***** ", " ****** ", " ***** ");
-        banner[1] = String.join(" ", "*     *", "*     *", "*     *", "*");
-        banner[2] = String.join(" ", "*     *", "*     *", "*     *", "*");
-        banner[3] = String.join(" ", "*     *", "*     *", "****** ", " ***** ");
-        banner[4] = String.join(" ", "*     *", "*     *", "*      ", "     *");
-        banner[5] = String.join(" ", "*     *", "*     *", "*      ", "*    *");
-        banner[6] = String.join(" ", " ***** ", " ***** ", "*      ", " **** ");
+        // Inline array initialization with String.join()
+        String[] banner = {
+            String.join(" ", " ***** ", " ***** ", " ****** ", " ***** "),
+            String.join(" ", "*     *", "*     *", "*     *", "*"),
+            String.join(" ", "*     *", "*     *", "*     *", "*"),
+            String.join(" ", "*     *", "*     *", "****** ", " ***** "),
+            String.join(" ", "*     *", "*     *", "*      ", "     *"),
+            String.join(" ", "*     *", "*     *", "*      ", "*    *"),
+            String.join(" ", " ***** ", " ***** ", "*      ", " **** ")
+        };
 
         // Print banner using loop
         for (String line : banner) {
@@ -31,8 +35,3 @@
         }
     }
 }
- * - Enhanced For Loop
- *
- * Output:
- * Banner display of the word OOPS using '*' characters.
- */
